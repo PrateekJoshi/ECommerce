@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CheckOut</title>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Cheese Checkout</h1>
+		</div>
+		<div id="content">
+			<div id="main">
+				<form wicket:id="form">
+					<h3>Check out</h3>
+					<p>Please enter your billing address.</p>
+					<table>
+						<tr>
+							<th>Name</th>
+							<td><input wicket:id="name" type="text" /></td>
+						</tr>
+						<tr>
+							<th>Street</th>
+							<td><input wicket:id="street" type="text" /></td>
+						</tr>
+						<tr>
+							<th>Zip code</th>
+							<td><input wicket:id="zipcode" type="text" /></td>
+						</tr>
+						<tr>
+							<th>City</th>
+							<td><input wicket:id="city" type="text" /></td>
+						</tr>
+						<tr>
+							<th>&nbsp;</th>
+							<td><input type="button" wicket:id="cancel" value="Cancel" />
+								<input type="submit" wicket:id="order" value="Order!" /></td>
+						</tr>
+
+					</table>
+				</form>
+			</div>
+			<div id="cart"></div>
+		</div>
+	</div>
+</body>
+</html>
