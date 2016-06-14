@@ -39,13 +39,14 @@ public class Index extends CheesePage {
 
 		add(cheesePages);
 		add(new PagingNavigator("navigator", cheesePages));
+		
 
 		add(new ListView("cart", new PropertyModel(this, "cart.cheeseList")) {
 			@Override
 			protected void populateItem(ListItem item) {
 				Cheese cheese = (Cheese) item.getModelObject();
-				item.add(new Label("name", cheese.getName()));
-				item.add(new Label("price", "$" + cheese.getPrice()));
+				item.add(new Label("name",(cheese==null)?"":cheese.getName()));
+				item.add(new Label("price",(cheese==null)?"": "$" + cheese.getPrice()));
 				item.add(new Link("remove", item.getModel()) {
 
 					@Override
